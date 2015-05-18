@@ -152,7 +152,17 @@ class EntityDescriptor(object):
                 self.tablename = entity.__name__.lower()
             else:
                 modulename = entity.__module__.replace('.', '_')
-                tablename = "%s" % (entity.__name__)
+                name_list = []
+                begin = 0
+                for i, c in enumerate(entity.__name__):
+                    if i == 0:
+                        continue
+                    if 'A' <= c <= 'Z':
+                        name_list.append(entity.__name__[begin:i].lower())
+                        begin = i
+                name_list.append(entity.__name__[begin:])
+                #tablename = "%s" % (entity.__name__)
+                tablename = "%s" % ('_'.join(name_list))
                 self.tablename = tablename.lower()
         elif hasattr(self.tablename, '__call__'):
             self.tablename = self.tablename(entity)
