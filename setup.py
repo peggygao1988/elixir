@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name='gearman',
+    name='elixir',
     version='0.7.1',
     author='Jiaze Gao',
     author_email='gaojiaze@papayamobile.com',
