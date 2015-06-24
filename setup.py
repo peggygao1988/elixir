@@ -1,8 +1,8 @@
 from setuptools import setup
-
+from elixir import __version__ as version
 setup(
     name='elixir',
-    version='0.7.1',
+    version=version,
     author='Jiaze Gao',
     author_email='gaojiaze@papayamobile.com',
     description='Elixir - a lightweight declarative layer on top of SqlAlchemy',
