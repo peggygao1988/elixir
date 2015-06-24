@@ -8,7 +8,7 @@ setup(
     description='Elixir - a lightweight declarative layer on top of SqlAlchemy',
     long_description=open('README.md').read(),
     url='https://github.com/peggygao1988/elixir/',
-    packages=['.'],
+    packages=['elixir'],
     license='Apache',
     classifiers=[
         'Development Status :: 5 - Production/Stable',
